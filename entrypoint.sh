@@ -9,6 +9,7 @@ BUILD_CONTEXT=$6
 PULL_IMAGE=$7
 BUILD_FOLDER=$8
 
+echo "performing docker build and image push"
 if [ $EXTRACT_TAG_FROM_GIT_REF == "true" ]; then
   DOCKER_IMAGE_TAG=$(echo ${GITHUB_REF} | sed -e "s/refs\/tags\///g")
 fi
