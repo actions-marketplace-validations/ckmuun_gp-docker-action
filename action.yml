@@ -27,6 +27,11 @@ inputs:
     description: 'Pull the image before buiding it'
     default: "false"
     required: false
+   build-folder:
+    description: 'change to this directory'
+    default: "."
+    required: false
+r
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -38,6 +43,7 @@ runs:
     - ${{ inputs.dockerfile }}
     - ${{ inputs.build-context}}
     - ${{ inputs.pull-image}}
+    - ${{ inputs.build-folder}}
 branding:
   icon: 'box'
   color: 'blue'
