@@ -27,11 +27,11 @@ inputs:
     description: 'Pull the image before buiding it'
     default: "false"
     required: false
-   build-folder:
-    description: 'change to this directory'
-    default: "."
-    required: false
-r
+  build-folder:
+   description: 'change to this directory'
+   default: "."
+   required: false
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
